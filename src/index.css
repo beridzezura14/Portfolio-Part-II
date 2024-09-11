@@ -16,6 +16,27 @@ body{
   position: relative;
   overflow-x: hidden;
 }
+.opening{
+  display: flex;
+  width: 103%;
+}
+
+.left__side{
+  position: fixed;
+  height: 100dvh;
+  width: 50%;
+  background-color: #3b3b3b;
+  z-index: 111;
+}
+.right__side{
+  position: fixed;
+  right: 0;
+  height: 100dvh;
+  width: 50%;
+  background-color: #3b3b3b;
+  z-index: 111;
+}
+
 
 .main__header{
   max-width: 90%;
@@ -24,19 +45,18 @@ body{
 }
 
 .header{
-  padding: 10px 0;
   display: flex;
   justify-content: center;
 }
 .header__content{
+  padding: 1rem 0;
   width: 100%;
   display: flex !important;
   justify-content: space-between !important;
   align-items: center;
 }
 .logo{
-  width: 50px;
-
+  font-size: 40px;
 }
 .burger{
   display: grid;
@@ -102,8 +122,8 @@ body{
 
 .burger__line__1.active{
   transition: .5s;
-  /* -webkit-transform: rotate(-225deg);
-  -moz-transform: rotate(-225deg); */
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
   transform: rotate(-45deg) translateY(3px) translateX(-4px);
 }
 .burger__line__2.active{
@@ -112,8 +132,8 @@ body{
 }
 .burger__line__3.active{
   transition: .5s;
-  /* -webkit-transform: rotate(225deg);
-  -moz-transform: rotate(225deg); */
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
   transform: rotate(45deg) translateY(-10px) translateX(-11px);
 }
 
@@ -139,6 +159,7 @@ body{
   font-size: 45px;
   font-family: "Libre Bodoni", system-ui;
   font-weight: 900;
+  opacity: 0;
 }
 .hero p{
   margin-top: 1rem;
@@ -161,6 +182,7 @@ body{
   overflow: hidden;
   background-color: #3b3b3b;
   color: #f1f1f1;
+  transition: .5s;
 }
 
 .btn::after{

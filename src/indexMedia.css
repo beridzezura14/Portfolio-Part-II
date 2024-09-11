@@ -1,7 +1,9 @@
 
 @media (min-width: 768px){
+
     .hero{
-        height: 80dvh;
+        margin: auto;
+        height: 70dvh;
         display: flex;
         align-items: center;
         gap: 3rem;
@@ -10,10 +12,10 @@
     }
 
     .my__img{
-        width: 300px;
-        border-top: 1px solid #3b3b3b57;
-        border-left: 1px solid #3b3b3b57;
-        padding: 1.5rem;
+        width: 270px;
+        border-top: 1px solid #aaaaaa41;
+        border-left: 1px solid #aaaaaa41;
+        padding: 1rem;
     }
     .hero__text{
         width: 40%;
@@ -50,6 +52,9 @@
 }
 
 @media (min-width: 1025px) {
+    .main__header{
+        max-width: 83%;
+    }
 
     .burger{
         display: none;
@@ -71,14 +76,55 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 100%;
+        width: 83%;
         bottom: 2rem;
         max-width: 90%;
         margin: auto;
     }
-    /* .navbar li a{
-        opacity: 0;
-    } */
+    .navbar li a{
+        font-size: 18px;
+    }
+
+
+    .decorline__item__1{
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #d4d4d4;
+        top: 5.5rem;
+    }
+    .decorline__item__2{
+        position: fixed;
+        left: 0;
+        width: 100%;
+        height: 5rem;
+        border:1px solid #d4d4d4;
+        background-color: #fff;
+        bottom: 0;
+        z-index: 111111;
+    }
+
+    .decorline__item__3{
+        position: fixed;
+        left: 0;
+        width: 5rem;
+        height: 100%;
+        border:1px solid #d4d4d4;
+        background-color: #fff;
+        top: 0;
+        bottom: 5rem;
+    }
+    .decorline__item__4{
+        position: fixed;
+        right: 0;
+        width: 5rem;
+        height: 100%;
+        border:1px solid #d4d4d4;
+        background-color: #fff;
+        top: 0;
+        bottom: 5rem;
+    }
 
 
 

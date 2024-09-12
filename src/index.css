@@ -49,11 +49,13 @@ body{
   justify-content: center;
 }
 .header__content{
+  position: fixed;
   padding: 1rem 0;
-  width: 100%;
+  width: 90%;
   display: flex !important;
   justify-content: space-between !important;
   align-items: center;
+  background-color: #fff;
 }
 .logo{
   font-size: 40px;
@@ -89,7 +91,7 @@ body{
   padding: 6rem 5%;
   transform: translateX(100%);
   transition: .5s;
-  z-index: 1111;
+  z-index: 11 !important;
 }
 
 .bottom__nav{

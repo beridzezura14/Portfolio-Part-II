@@ -2,6 +2,11 @@
     height: auto !important;
 }
 
+.btn__about{
+    position: relative;
+    z-index: -1;
+}
+
 .btn__about::after{
     content: "Download CV" !important;
 }
@@ -12,7 +17,7 @@
 
 .about__content{
     max-width: 90%;
-    margin: 3rem auto;
+    margin: 7.5rem auto;
 }
 
 .about__heads{
@@ -58,9 +63,11 @@
 .percentage__line{
     margin-top: 10px;
     width: 100%;
-    height: 2px;
+    height: 4px;
     background-color: #e6e6e6;
     overflow: hidden;
+    position: relative;
+    z-index: -111;
 }
 
 .exp__item{

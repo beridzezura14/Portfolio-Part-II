@@ -126,7 +126,7 @@ function About() {
         })
         gsap.from( ".knowledge__level", {
                 delay: 0.5,
-                x: -550,
+                x: '-100%',
                 duration: 1,
                 stagger: 0.1,
                 ease: "power1.inOut",
@@ -192,7 +192,9 @@ function About() {
                                                     {
                                                         width: `${item.percentage}%`,
                                                         backgroundColor: `#3B3B3B`,
-                                                        height: `2px`
+                                                        height: `4px`,
+                                                        position: `relative`,
+                                                        zIndex: `-1`
                                                     }
                                                 }
                                             ></div>

@@ -26,7 +26,7 @@ body{
   height: 100dvh;
   width: 50%;
   background-color: #3b3b3b;
-  z-index: 111;
+  z-index: 11111111;
 }
 .right__side{
   position: fixed;
@@ -34,7 +34,7 @@ body{
   height: 100dvh;
   width: 50%;
   background-color: #3b3b3b;
-  z-index: 111;
+  z-index: 11111111;
 }
 
 

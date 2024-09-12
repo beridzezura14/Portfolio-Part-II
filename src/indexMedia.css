@@ -102,7 +102,7 @@
         border:1px solid #d4d4d4;
         background-color: #fff;
         bottom: 0;
-        z-index: 111111;
+        z-index: 1;
     }
 
     .decorline__item__3{
@@ -111,9 +111,12 @@
         width: 5rem;
         height: 100%;
         border:1px solid #d4d4d4;
-        background-color: #fff;
+        background-color: transparent;
         top: 0;
         bottom: 5rem;
+
+        z-index: 1;
+
     }
     .decorline__item__4{
         position: fixed;
@@ -121,9 +124,11 @@
         width: 5rem;
         height: 100%;
         border:1px solid #d4d4d4;
-        background-color: #fff;
+        background-color: transparent;
         top: 0;
         bottom: 5rem;
+        z-index: 1;
+
     }
 
 

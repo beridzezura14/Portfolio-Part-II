@@ -1,0 +1,33 @@
+@media (min-width: 768px){
+    .exp__item{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .exp__date{
+        text-align: right;
+    }
+}
+
+
+@media (min-width: 1025px) {
+    .about__content{
+        max-width: 83% !important;
+    }
+
+    .personal__info{
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .personal__info__exp{
+        grid-template-columns: repeat(1, 1fr);
+        border-bottom: none;
+        margin-bottom: 7rem;
+    }
+}
+
+@media (min-width: 1300px){
+    .about__content{
+        max-width: 1100px !important;
+    }
+}

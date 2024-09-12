@@ -1,6 +1,5 @@
 
 @media (min-width: 768px){
-
     .hero{
         margin: auto;
         height: 70dvh;
@@ -80,6 +79,10 @@
         bottom: 2rem;
         max-width: 90%;
         margin: auto;
+        z-index: 1;
+    }
+    .other__page{
+        left: 8.5%
     }
     .navbar li a{
         font-size: 18px;

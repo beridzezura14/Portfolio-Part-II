@@ -2,6 +2,13 @@ import PagesHeader from "../pagesHeader";
 import '../about/about.css'
 import '../about/aboutMedia.css'
 
+import { useGSAP } from "@gsap/react";
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
+
+
+
 const peesonalInfo = [
     {   
         id: 1,
@@ -88,7 +95,7 @@ const experience = [
     {   
         id: 2,
         name: "Architectural Service",
-        position: "Tecnical Specialist",
+        position: "Technical Specialist",
         date: "2020-2022"
     },
     {   
@@ -99,19 +106,64 @@ const experience = [
     },
    
 ]
+
+
+
+
 function About() {
+    useGSAP(() => {
+        gsap.fromTo(".fade", {
+            delay: 0.5,
+            opacity: 0,
+            stagger: 0.1,
+        },{
+            delay: 0.5,
+            opacity: 1,
+            stagger: 0.2,
+            scrollTrigger:{
+                trigger: ".fade"
+            }
+        })
+        gsap.from( ".knowledge__level", {
+                delay: 0.5,
+                x: -550,
+                duration: 1,
+                stagger: 0.1,
+                ease: "power1.inOut",
+                scrollTrigger: {
+                    trigger: ".knowledge__level",
+                }
+            }
+        )
+        gsap.fromTo('.per__item', {
+            delay: 1,
+            opacity: 0,
+            stagger: 0.1,
+            ScrollTrigger: {
+                trigger: '.per__item'
+            }
+        }, {
+            delay: 1,
+            opacity: 1,
+            stagger: 0.1,
+            ScrollTrigger: {
+                trigger: '.per__item'
+            }
+        })
+
+    })
     return (
         <>
             <PagesHeader />
             <div className="about__content">
-                <div className="about__text">
+                <div className="about__text fade">
                     <h2 className="about__heads">Biography</h2>
                     <p>I’m Zura, a web developer specializing in React.js and other web technologies. I have strong skills in HTML, CSS, and JavaScript, with experience in using GSAP for animations. Im proficient in GitHub and have a solid understanding of both JavaScript and Python. Currently, Im working on a project to develop a search engine and am exploring opportunities to work as a freelancer. I have strong skills in HTML, CSS, and JavaScript, with experience in using GSAP for animations. Im proficient in GitHub and have a solid understanding of both JavaScript and Python. Currently, Im working on a project to develop a search engine and am exploring opportunities to work as a freelancer.</p>
                     <div className='btn__div' >
                         <button className='btn btn__about'>Download CV</button>
                     </div>
                 </div>
-                <div className="personal__info">
+                <div className="personal__info fade">
                     <div>
                         <h2 className="about__heads">Personal Info</h2> 
                         <div className="per__info" >
@@ -129,13 +181,13 @@ function About() {
                         <div className="per__info" >
                             {
                                 skills.map(item => (
-                                    <div className="per__item" key={item.id}>
+                                    <div className="" key={item.id}>
                                         <div className="name__percentage">
                                             <div>{item.name}</div>  
                                             <div>{item.percentage}%</div>
                                         </div>
                                         <div className="percentage__line">
-                                            <div
+                                            <div className="knowledge__level"
                                                 style={
                                                     {
                                                         width: `${item.percentage}%`,
@@ -151,7 +203,7 @@ function About() {
                         </div>
                     </div>
                 </div>
-                <div className="personal__info personal__info__exp">
+                <div className="personal__info personal__info__exp fade">
                     <div>
                         <h2 className="about__heads">Work Experionce</h2> 
                         <div className="per__info" >

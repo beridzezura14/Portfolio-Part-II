@@ -152,7 +152,9 @@ body{
   flex-direction: column;
   justify-content: center;
   padding: 3rem 0 4rem 0;
+}
 
+.my__img, .hero__text{
   position: relative;
   z-index: -1;
 }
